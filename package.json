@@ -1,0 +1,14 @@
+{
+  "name": "revel",
+  "version": "1.0.0",
+  "description": "Revel-Photography",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Taralyn Heard",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

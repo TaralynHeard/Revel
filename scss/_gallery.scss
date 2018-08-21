@@ -1,0 +1,137 @@
+.wrapper {
+  text-align: center;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+
+#nature,
+#people,
+#urban {
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+
+.gallery__heading,
+.gallery__heading--2 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  color: $white;
+  font-size: 6rem;
+  letter-spacing: 1.3rem;
+  text-transform: uppercase;
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.gallery__heading {
+  @include respond(tab-port) {
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  @include respond(phone) {
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.gallery__heading--2 {
+  margin-top: 0rem;
+  margin-bottom: 3.5rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 1rem;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-areas:
+  //   "photo1 photo2 photo3"
+  //   "photo4 photo5 photo6";
+  grid-gap: 2rem;
+  height: 100%;
+  width: 100%;
+  padding: 3.5rem;
+  // margin: 2rem 7rem 3rem 10rem;
+
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+
+  a {
+    display: block;
+    // height: 95%;
+    height: 100%;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+    // grid-template-areas: "photo1 photo2" "photo3 photo4" "photo5 photo6";
+    padding: 0;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+    padding: 0;
+  }
+}
+
+.photo1,
+.photo2,
+.photo3,
+.photo4,
+.photo5,
+.photo6 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  // margin: 3rem;
+  backface-visibility: hidden;
+
+  @include respond(tab-port) {
+    // height: 25vh;
+    height: 30rem;
+    width: 100%;
+  }
+  @include respond(phone) {
+    height: 43vh;
+  }
+}
+
+.photo1 {
+  grid-area: photo1;
+}
+.photo2 {
+  grid-area: photo2;
+}
+.photo3 {
+  grid-area: photo3;
+}
+.photo4 {
+  grid-area: photo4;
+}
+.photo5 {
+  grid-area: photo5;
+}
+.photo6 {
+  grid-area: photo6;
+}

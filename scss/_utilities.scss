@@ -1,0 +1,141 @@
+/////// Variables ///////
+$white: #fff;
+$black: #000;
+$grey: #333;
+$yellow: yellow;
+
+/////// Mixins ///////
+// @mixin heading {
+//   font-family: "Saira Extra Condensed", sans-serif;
+//   text-transform: uppercase;
+//   letter-spacing: 0.7rem;
+// }
+
+/*MEDIA QUERY MANAGER*/
+/*
+0-600px:         Phone
+600-900px       Tablet portrait
+900-1200px      Tablet landscape
+[1200-1800]     Normal Styles
+1800px + :      Big Desktop
+ 
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}
+
+// and (-webkit-min-device-pixel-ratio: 3)
+
+/////// Utility classes/ids ///////
+.space {
+  padding: 3rem;
+}
+
+.space--top {
+  margin-top: 4rem;
+}
+
+#black {
+  background-color: $black;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+}
+////// Animations ////////
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  // 80% {
+  //   transform: translateX(10px);
+  // }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  // 80% {
+  //   transform: translateX(10px);
+  // }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

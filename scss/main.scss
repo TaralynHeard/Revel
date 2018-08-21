@@ -1,0 +1,50 @@
+@import "_utilities";
+@import "_home";
+@import "_header";
+@import "_services";
+@import "_gallery";
+@import "_video";
+@import "_button";
+@import "_booking";
+@import "_popup";
+@import "_footer";
+@import "_about";
+@import "_contact";
+@import "_mobile";
+
+/////// Global Styles ///////
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+/////// Gallery home page section ///////
