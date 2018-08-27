@@ -886,7 +886,7 @@ $breakpoint arguement choices:
 @media (max-width: 37.5em) {
   .about__image {
     grid-area: image;
-    background-image: url("img/aboutheader-phone.jpg");
+    background-image: url("../img/aboutheader-phone.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
