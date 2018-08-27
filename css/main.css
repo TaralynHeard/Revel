@@ -355,7 +355,8 @@ $breakpoint arguement choices:
     .header__image {
       height: 83vh;
       width: 100%;
-      overflow-x: hidden; } }
+      overflow-x: hidden;
+   background-attachment: scroll;} }
 
 .services {
   height: 100%;
@@ -934,7 +935,8 @@ $breakpoint arguement choices:
       grid-area: text;
       background-image: none;
       background-color: #000;
-      height: 45vh; } }
+      height: 45vh;
+   background-attachment: scroll;} }
 
 .about__heading {
   font-family: "Saira Extra Condensed", sans-serif;
