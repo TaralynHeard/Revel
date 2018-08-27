@@ -936,7 +936,8 @@ $breakpoint arguement choices:
       background-image: none;
       background-color: #000;
       height: 45vh;
-   background-attachment: scroll;} }
+   background-attachment: scroll;
+       background-image: url(../img/aboutheader-tabport-1.jpg);} }
 
 .about__heading {
   font-family: "Saira Extra Condensed", sans-serif;
